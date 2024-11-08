@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-gray: #666;
+  --color-white: white;
+  --color-dark-gray: #282e34;
+  --color-light-gray: rgb(241, 241, 241);
+  --color-black: black;
+  --color-purple: purple;
+  --color-light-text: #ddd;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.8rem;
+  color: var(--color-gray);
+  height: 100%;
+}
+
+.bg-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.7;
+  min-height: 80%;
+}
+
+.bg-image-first {
+  background-image: url("./img/bg.jpg");
+}
+
+.bg-image-second {
+  background-image: url("./img/bg2.jpg");
+}
+
+.bg-image-third {
+  background-image: url("./img/bg3.jpg");
+}
+
+.bg-image-fourth {
+  background-image: url("./img/bg4.jpg");
+}
+
+.heading-container {
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  color: var(--color-white);
+}
+
+.heading-container__heading--logo {
+  width: 50%;
+  margin: 1rem;
+  filter: drop-shadow(2px 2px 0px var(--color-white));
+}
+
+.heading-large,
+.heading-small {
+  background-color: var(--color-black);
+  outline: 0.5rem inset var(--color-purple);
+  outline-offset: 1rem;
+  line-height: 5rem;
+}
+
+.heading-large {
+  padding: 2rem;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  text-transform: uppercase;
+}
+
+.heading-small {
+  padding: 0.7rem;
+  border-top-left-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
+  text-transform: capitalize;
+}
+
+.section {
+  text-align: center;
+  padding: 3rem 5rem;
+}
+
+.section-light {
+  background-color: var(--color-light-gray);
+  color: var(--color-gray);
+}
+
+.section-dark {
+  background-color: var(--color-dark-gray);
+  color: var(--color-light-text);
+}
+
+.last {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 760px) {
+  .heading-container {
+    font-size: 2rem;
+  }
+
+  .heading-large,
+  .heading-small {
+    padding: 1rem;
+    border-radius: 1rem;
+    outline-offset: 0.6rem;
+  }
+
+  .heading-large {
+    line-height: 2.5rem;
+  }
+
+  .heading-small {
+    line-height: 2.4rem;
+  }
+
+  .section {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 568px) {
+  .bg-container {
+    background-attachment: scroll;
+  }
+}
